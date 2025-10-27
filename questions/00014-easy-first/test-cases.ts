@@ -13,3 +13,6 @@ type errors = [
   // @ts-expect-error
   First<{ 0: 'arrayLike' }>,
 ]
+
+const arr = [3, 2, 1] as const
+type T = typeof arr[0]
