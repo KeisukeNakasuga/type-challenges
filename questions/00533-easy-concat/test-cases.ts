@@ -12,3 +12,5 @@ type cases = [
 
 // @ts-expect-error
 type error = Concat<null, undefined>
+
+type a = typeof tuple
