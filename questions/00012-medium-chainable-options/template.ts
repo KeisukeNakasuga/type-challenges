@@ -1,4 +1,7 @@
-type Chainable = {
-  option(key: string, value: any): any
-  get(): any
+type Chainable<T = object> = {
+  option: <K extends string, V>(
+    key: K,
+    value: V
+  ) => Chainable<Omit<T, K> & Record<K, V>>
+  get: () => T
 }

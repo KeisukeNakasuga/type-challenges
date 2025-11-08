@@ -5,3 +5,6 @@ type cases = [
   Expect<Equal<Pop<['a', 'b', 'c', 'd']>, ['a', 'b', 'c']>>,
   Expect<Equal<Pop<[]>, []>>,
 ]
+
+type A = Pop<[3, 2, 1]>
+let a: A = [3, 2]
